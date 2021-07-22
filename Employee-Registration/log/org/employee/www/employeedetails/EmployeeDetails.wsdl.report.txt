@@ -1,0 +1,21 @@
+
+
+Importing file: C:\Users\sivar\IBM\IIBT10\workspace\IIBWorks\Soap\EMPLOYEE\EmployeeDetails.wsdl
+
+The WSDL import will proceed with bindings EmployeeDetailsSOAP.
+Creating wsdl schema document for file:///C:/Users/sivar/IBM/IIBT10/workspace/IIBWorks/Soap/EMPLOYEE/EmployeeDetails.wsdl.
+Parsing wsdl binding {http://www.employee.org/EmployeeDetails/}EmployeeDetailsSOAP.
+Parsing wsdl binding input InsertEmployeeDetails.
+Parsing wsdl binding output InsertEmployeeDetails.
+Processing doc style for operation InsertEmployeeDetails.
+Populating WSDL schema EmployeeDetails.xsd.
+Creating file EmployeeDetails.xsd in the workspace.
+Copying source WSDL EmployeeDetails.wsdl to EmployeeDetails.wsdl.
+
+Elapsed time processing this message definition file: 0.191 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+

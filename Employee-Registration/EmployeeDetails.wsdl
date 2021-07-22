@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="EmployeeDetails" targetNamespace="http://www.employee.org/EmployeeDetails/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.employee.org/EmployeeDetails/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <binding hasEncoding="false" imported="true" name="EmployeeDetailsSOAP" originalBindingStyle="document"/>
+        <generatedXSD location="EmployeeDetails_InlineSchema1.xsd"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  
+  <wsdl:types>
+    
+          <xsd:schema targetNamespace="http://www.employee.org/EmployeeDetails/" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions">
+<xsd:include schemaLocation="EmployeeDetails_InlineSchema1.xsd"/>
+</xsd:schema>
+    </wsdl:types>
+  <wsdl:message name="InsertEmployeeDetailsRequest">
+    <wsdl:part element="tns:InsertEmployeeDetails" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="InsertEmployeeDetailsResponse">
+    <wsdl:part element="tns:InsertEmployeeDetailsResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="EmployeeDetails">
+    <wsdl:operation name="InsertEmployeeDetails">
+      <wsdl:input message="tns:InsertEmployeeDetailsRequest"/>
+      <wsdl:output message="tns:InsertEmployeeDetailsResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EmployeeDetailsSOAP" type="tns:EmployeeDetails">
+  	<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+  	<wsdl:operation name="InsertEmployeeDetails">
+  		<soap:operation soapAction="http://www.employee.org/EmployeeDetails/InsertEmployeeDetails"/>
+  		<wsdl:input>
+  			<soap:body use="literal"/>
+  		</wsdl:input>
+  		<wsdl:output>
+  			<soap:body use="literal"/>
+  		</wsdl:output>
+  	</wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EmployeeDetails">
+    <wsdl:port binding="tns:EmployeeDetailsSOAP" name="EmployeeDetailsSOAP">
+      <soap:address location="http://127.0.0.1:7800/employeedetails/insertDetails"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
