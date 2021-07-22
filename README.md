@@ -1,3 +1,3 @@
 # ACE-Demo
 
-This is repo created to import my message flows from ACE toolkit.
+This repo is created to import my message flows from ACE toolkit.
